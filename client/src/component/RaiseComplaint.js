@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const RaiseComplaint = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     if (!localStorage.getItem("authToken")) {
       navigate("/login");
@@ -11,7 +12,6 @@ const RaiseComplaint = () => {
     }
   }, []);
 
-  const navigate = useNavigate();
   const [cred, setCred] = useState({
     type: "",
     problemDetails: "",
@@ -55,14 +55,14 @@ const RaiseComplaint = () => {
 
   return (
     <div className="body baseCol">
-      <div className="card">
+      <div className="card raiseCard">
         <div className="card-body">
           <div className="container">
             <div className="cardhead grad text-white">
               <h3>On Line Complaint Form</h3>
             </div>
             <div className="row mt-3 mb-3">
-              <div className="col-sm-12 col-md-6 form-group">
+              <div className="col-xs-12 col-sm-6 form-group">
                 <label htmlFor="type">Type of Complaint</label>
                 <select
                   className="form-control form-select"
@@ -80,7 +80,7 @@ const RaiseComplaint = () => {
                   <option>Student Contigency</option>
                 </select>
               </div>
-              <div className="col-sm-12 col-md-6 form-group">
+              <div className="col-xs-12 col-sm-6 form-group">
                 <label htmlFor="hostel">Location</label>
                 <select
                   className="form-control form-select"
@@ -100,7 +100,7 @@ const RaiseComplaint = () => {
               </div>
             </div>
           </div>
-          <div className="row mt-3 mb2">
+          <div className="row mt-3 mb-3 RaiseComp">
             <div className="col-xs-12 col-sm-6 form-group">
               <label htmlFor="room">Room No:</label>
               <textarea
@@ -124,7 +124,7 @@ const RaiseComplaint = () => {
               />
             </div>
           </div>
-          <div className="row mt-3 mb-3">
+          <div className="row mt-3 mb-3 RaiseComp">
             <div className="col-xs-12 col-sm-6 form-group">
               <label htmlFor="timeAvailable">Time of Availabilty</label>
               <textarea

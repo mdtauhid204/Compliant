@@ -40,7 +40,7 @@ const Adminview = () => {
         const json = res.data;
         console.log(json);
         setComplaints(json);
-        setComplaints(json);
+        setComplete(json);
       });
   };
   const handleAccept = (id) => {
@@ -128,7 +128,7 @@ const Adminview = () => {
               Type of Complaint:{" "}
             </label>
             <select
-              className="form-control form-select d-inline w-25"
+              className="form-control form-select d-inline filterSelect"
               id="type"
               name="type"
               value={type}
@@ -148,7 +148,7 @@ const Adminview = () => {
               Location:
             </label>
             <select
-              className="form-control form-select w-25 d-inline"
+              className="form-control form-select d-inline filterSelect"
               id="hostel"
               name="hostel"
               value={hostel}

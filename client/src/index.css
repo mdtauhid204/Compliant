@@ -35,6 +35,7 @@ body{
   .collapse {
     text-align: center;
     justify-content: center !important;
+    
   }
 }
 
@@ -80,6 +81,8 @@ body{
   z-index: 2;
   border: 2px solid black;
   border-radius: 20px;
+  padding: 4px;
+  line-height: 2px;
 }
 
 #login form button,#signup form button {
@@ -114,7 +117,7 @@ label {
 .body{
   padding-top:89px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .baseCol{
@@ -122,7 +125,7 @@ label {
   background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
-.card {
+.raiseCard {
   width: 65%;
   margin: 50px auto;
   padding-top: 20px;
@@ -146,6 +149,17 @@ label {
   z-index: 2;
 }
 
+
+.RaiseComp{
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+}
+
+@media only screen and (max-width:768px){
+  .raiseCard{
+    width: 80%;
+  }
+}
 /***************** View Complaint  ******************/
 
 .viewcomp {
@@ -157,16 +171,22 @@ label {
   font-weight: 700;
   font-size: 20px;
   text-align: center ;
-  margin: 10px auto;
+  margin: 5px auto !important;
   background-image: linear-gradient(to right, #2C3E50, #000000);
   border-radius: 5px;
-  height: 80%;
+  height: 80% ;
   width: 94%;
 }
 
 
 .card-title  h2{
   padding: 5px auto !important;
+}
+
+@media screen and (max-width:768px){
+  .card-title{
+    height: 75px !important;
+  }
 }
 
 /******************* Admin View ***********************/
@@ -207,14 +227,14 @@ td button{
   margin-right:15px;
 }
 
-.textBold + select{
+.filterSelect{
   height: 30px;
-  font-size: 14px;
-  background-color: transparent;
+  font-size: 12px !important;
+  background-color: transparent !important;
 }
 
 .filterbtn{
-  width: 70px;
+  width: 80px;
   font-size: large;
   border-radius: 15px;
   background-color: #0fd64f;
@@ -225,9 +245,10 @@ td button{
 
 
 /*******************Single View **********************/
+
 .title {
   margin-top: 100px;
-  margin-bottom: -20px;
+  margin-bottom: -20px ;
   text-align: center;
   font-weight: bold;
   font-size: xx-large
@@ -236,7 +257,9 @@ td button{
 .card-title{
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px !important;
   height: 50px;
+  width: 100% !important;
 }
 
 .compTitle{
@@ -257,7 +280,38 @@ td button{
   border-radius: 2px;
 }
 
-.container .row{
+@media screen and (max-width:576px){
+  .viewrow{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+
+  .singleCont{
+    margin-top: -20px !important;
+  }
+
+  .title{
+    margin-top: 20px;
+  }
+  .card-title{
+    padding-top: 2px;
+  
+  }
+  .container{
+    margin-top: 5px !important;
+  }
+  .actionflex{
+    flex-direction: column;
+    align-items: center;
+  }
+  .actionbtn{
+    margin-top: 10px;
+
+  }
+}
+
+.singleCont{
   margin: 20px;
 
 }
@@ -267,7 +321,7 @@ td button{
 }
 
 .viewrow  :nth-child(2){
-  font-weight: 400;
+  font-weight: 450;
 }
 
 .viewrow p{
@@ -287,24 +341,28 @@ td button{
 .acceptbtn{
   background-color:#0fd64f;
   border-radius:20px;
-  width: 15% !important;
+  width: 130px !important;
   height: 30px;
+  margin: 3px;
   box-shadow: green;
 }
 
 .rejectbtn{
   background-color: red;
   border-radius:20px;
-  width: 15% !important;
-  margin:0px 20px ;
+  width: 130px !important;
+  margin:3px 20px ;
+  height: 30px;
   box-shadow: crimson;
 }
 
 .escalatebtn{
   background-color:rgb(0, 255, 208);
   border-radius:20px;
-  width: 15% !important;
-  box-shadow:#194a6e
+  height: 30px;
+  width: 130px !important;
+  box-shadow:#194a6e;
+
 }
 
 .actionbtn{
@@ -329,7 +387,7 @@ td button{
 }
 
 .left img {
-  margin-top: 20px;
+  margin: auto;
   width: 100% !important;
 }
 

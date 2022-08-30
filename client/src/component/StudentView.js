@@ -29,7 +29,7 @@ const ViewComplait = () => {
   return (
     <>
       <div className="baseCol body">
-        <div className="card">
+        <div className="card raiseCard">
           <div className="card-body">
             <div className="card-title">
               <h2 className="text-white">List of all registered complaints</h2>
